@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <a href="index.html" target="_blank" rel="noopener noreferrer">
+        <p>Back to Simple Algoriths</p>
+    </a>
     <h1>Median of two sorted arrays</h1>
     <p> Array1 [4, -4, 1, -3, 6, -7, 19, 45, 34, 67]</P>
     <p> Array2 [0, 9, 21, -13, 38, 52, 11, 23]</p>
@@ -22,14 +25,14 @@
         var e = Math.floor(d / 2);
         console.log(d);
         console.log(e);
-            if (d % 2 !== 0) {
-                console.log(c[e]);
-                document.write("<p>Median " + c[e] + "</p>");
-            }
-            else {
-                console.log((c[e - 1] + c[e]) / 2);
-                document.write("<p>Median " + ((c[e - 1] + c[e]) / 2) + "</p>");
-            }
+        if (d % 2 !== 0) {
+            console.log(c[e]);
+            document.write("<p>Median " + c[e] + "</p>");
+        }
+        else {
+            console.log((c[e - 1] + c[e]) / 2);
+            document.write("<p>Median " + ((c[e - 1] + c[e]) / 2) + "</p>");
+        }
 
 
 ////****OTHER WAY TO DO IT*****////
