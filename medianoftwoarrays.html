@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>median of two sorted arrays</title>
+
+</head>
+
+<body>
+    <h1>Median of two sorted arrays</h1>
+    <p> Array1 [4, -4, 1, -3, 6, -7, 19, 45, 34, 67]</P>
+    <p> Array2 [0, 9, 21, -13, 38, 52, 11, 23]</p>
+    <script>
+        var a = [4, -4, 1, -3, 6, -7, 19, 45, 34, 67];
+        var b = [0, 9, 21, -13, 38, 52, 11, 23];
+        var c = (a.concat(b).sort(function (a, b) { return a - b; }));
+        console.log(c);
+        document.write("New array " + "[" + [c] + "]")
+        var d = c.length;
+        var e = Math.floor(d / 2);
+        console.log(d);
+        console.log(e);
+            if (d % 2 !== 0) {
+                console.log(c[e]);
+                document.write("<p>Median " + c[e] + "</p>");
+            }
+            else {
+                console.log((c[e - 1] + c[e]) / 2);
+                document.write("<p>Median " + ((c[e - 1] + c[e]) / 2) + "</p>");
+            }
+
+
+////****OTHER WAY TO DO IT*****////
+        // const median = (a1, a2) => {
+        //     let x = a1.concat(a2);
+        //     x.sort(function (a, b) {
+        //         return a - b;
+        //     });
+        //     let len = x.length;
+
+        //     return len % 2 === 0 ? (x[Math.floor(len / 2) - 1] + x[Math.ceil(len / 2)]) / 2 : x[Math.floor(len / 2)];
+
+        // }
+        // let a = [4, -4, 1, -3, 6, -7, 19, 45, 34, 67];
+        // let b = [0, 9, 21, -13, 38, 52, 11, 23];
+        // console.log(median(a, b));
+        // document.write("<p>Median " + median(a, b) + "</p>");
+
+    </script>
+</body>
+
+</html>
